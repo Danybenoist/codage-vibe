@@ -1,0 +1,120 @@
+/* Pricing Cards CSS */
+.pricing-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.pricing {
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 0 10px #ccc; /* Fixed: was 'box-shdow' */
+  padding: 20px;
+  text-align: left;
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.pricing:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.title {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0 0 10px 0;
+  color: #333;
+}
+
+.price {
+  font-size: 18px;
+  color: green;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.features {
+  list-style: none;
+  padding-left: 0;
+  margin: 15px 0;
+}
+
+.features li {
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.features li:last-child {
+  border-bottom: none;
+}
+
+.btn {
+  background: blue;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  margin-top: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease, outline 0.2s ease;
+  width: 100%;
+}
+
+.btn:hover {
+  background: darkblue;
+}
+
+.btn:focus {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+.btn:focus:not(:focus-visible) {
+  outline: none;
+}
+
+.btn:focus-visible {
+  outline: 2px solid #007bff;
+  outline-offset: 2px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricing-container {
+    grid-template-columns: 1fr;
+    padding: 10px;
+  }
+  
+  .pricing {
+    padding: 15px;
+  }
+  
+  .title {
+    font-size: 20px;
+  }
+  
+  .price {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  .pricing {
+    padding: 12px;
+  }
+  
+  .title {
+    font-size: 18px;
+  }
+  
+  .btn {
+    padding: 10px 20px;
+    font-size: 13px;
+  }
+}
